@@ -1,0 +1,12 @@
+//Return coordinates formated like this: ["207.105,92.2"], ["208.105,82.2"]
+function coordArray(coordString) {
+  var coords = coordString.split(" ")
+  var temp = coords.slice();
+  var arr = [];
+
+  while (temp.length) {
+    arr.push(temp.splice(0,1));
+  }
+
+  return arr;
+}
