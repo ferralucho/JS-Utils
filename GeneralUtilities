@@ -1,12 +1,13 @@
-//Return coordinates formated like this: ["207.105,92.2"], ["208.105,82.2"]
+//Input "1006.765, 405.486 1006.979, 402.069 1004.523"
+//Return coordinates formated like this: ["1006.765,405.486"], ["1006.979,402.069 1004.523"]
 function coordArray(coordString) {
-  var coords = coordString.split(" ")
-  var temp = coords.slice();
-  var arr = [];
+    let re = new RegExp(", ", 'g');
+    let coords = coordString.replace(re, ",").split(" ");
+    let temp = coords.slice();
+    let arr = [];
 
-  while (temp.length) {
-    arr.push(temp.splice(0,1));
-  }
-
-  return arr;
+    while (temp.length) {
+        arr.push(temp.splice(0, 1));
+    }
+    return arr;
 }
