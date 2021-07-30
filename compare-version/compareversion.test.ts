@@ -1,4 +1,4 @@
-import { compareFirmwareVersions } from '../src/statemachine'
+import { compareFirmwareVersions } from '../src/compare-version'
 
 const versionCases = [
   ['v0.0.99d', 'v0.0.99d', 0],
